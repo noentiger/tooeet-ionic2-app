@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Hungry?</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="page-home">
+
+  <ion-slides>
+    <ion-slide *ngFor="let dish of dishes">
+      <img [src]="dish.images[0]" class="slide-image"/>
+      <h2 class="slide-title" [innerHTML]="dish.title"></h2>
+      <p [innerHTML]="dish.description"></p>
+    </ion-slide>
+    <ion-slide>
+      <ion-toolbar>
+      </ion-toolbar>
+      <img src="img/ica-slidebox-img-4.png" class="slide-image"/>
+      <h2 class="slide-title">No more dishes...</h2>
+      <button large clear>
+        Add dish
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
